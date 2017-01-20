@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # install uwsgi now because it takes a little while
-RUN pip install uwsgi
+RUN pip3 install uwsgi
 
 # setup all the configfiles
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
@@ -41,7 +41,7 @@ COPY supervisor-app.conf /etc/supervisor/conf.d/
 # to prevent re-installinig (all your) dependencies when you made a change a line or two in your app. 
 
 COPY app/requirements.txt /home/docker/code/app/
-RUN pip install -r /home/docker/code/app/requirements.txt
+RUN pip3 install -r /home/docker/code/app/requirements.txt
 
 # add (the rest of) our code
 COPY . /home/docker/code/
