@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y \
 	nginx \
 	supervisor \
 	sqlite3 \
+	libpq-dev \
   && rm -rf /var/lib/apt/lists/*
 
 # install uwsgi now because it takes a little while
