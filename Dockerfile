@@ -29,8 +29,6 @@ RUN apt-get update && apt-get install -y \
 	sqlite3 \
   && rm -rf /var/lib/apt/lists/*
 
-RUN easy_install pip
-
 # install uwsgi now because it takes a little while
 RUN pip install uwsgi
 
