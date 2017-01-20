@@ -28,6 +28,15 @@ RUN apt-get update && apt-get install -y \
 	supervisor \
 	sqlite3 \
 	libpq-dev \
+	libtiff5-dev \
+	libjpeg8-dev \
+	zlib1g-dev \
+	libfreetype6-dev \
+	liblcms2-dev \
+	libwebp-dev \
+	tcl8.6-dev \
+	tk8.6-dev \
+	python-tk \
   && rm -rf /var/lib/apt/lists/*
 
 # install uwsgi now because it takes a little while
